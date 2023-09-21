@@ -1,6 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+}
 nav 
 {
-    background: linear-gradient(to right, #00c79c, #2f00ff);
+
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+        -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+      
 }
 .carousel-item
 {
@@ -46,8 +55,23 @@ h2
     font-size:30px;
     box-shadow: 1px 1px 2px #888;
     z-index:1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all linear;
+}
+.floatWa:hover{
+transform: scale(1.08);
 }
 
 .img16 {
-    margin-top:16px;
+}
+.card button{
+border-radius: 0px !important;
+}
+.card-img-top{
+    height: 300px ;
+}
+.card h5{
+font-weight: 600;
 }
