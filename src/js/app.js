@@ -34,10 +34,7 @@ function CarrinhosDeCompras() {
                         let row = document.createElement('tr');
                         row.innerHTML = `
                             <td>${item.desc}</td>
-                            <td>${item.item}</td>
-                            <td>${item.produto}</td>
                             <td>${item.qtde}</td>
-                            <td>${item.status}</td>
                             <td>${item.valor}</td>
                         `;
                         tbody.appendChild(row);
