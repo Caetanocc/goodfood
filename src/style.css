@@ -60,7 +60,31 @@ h2
     justify-content: center;
     transition: 0.3s all linear;
 }
+.floatBuy {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:120px;
+    background-color:#dddddd;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index:1000;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all linear;
+}
+.floatBuy img{
+    width: 30px;
+}
 .floatWa:hover{
+transform: scale(1.08);
+}
+.floatBuy:hover{
 transform: scale(1.08);
 }
 
@@ -74,4 +98,19 @@ border-radius: 0px !important;
 }
 .card h5{
 font-weight: 600;
+}
+.Modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.473);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.Modal div{
+    width: 500px;
 }
