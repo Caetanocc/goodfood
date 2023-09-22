@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="src/style.css">
+  <link rel="stylesheet" href="src/js/snackbar.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <title>Good Food</title>
@@ -77,9 +78,12 @@
           <div class="card-body">
             <h5 class="card-title">Tigela de abacate</h5>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#abacate">
+            <button type="button" class="btn btn-warning" 
+                    data-bs-toggle="modal" data-bs-target="#abacate">
               Ver receita
             </button>
+
+            <button type="button" class="btn btn-success" id="p1">Pedir</button>
 
             <div class="modal fade" id="abacate" tabindex="-1" aria-labelledby="abacateLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -125,9 +129,10 @@
           <div class="card-body">
             <h5 class="card-title">Salada de kiwi</h5>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#kiwi">
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#kiwi">
               Ver receita
             </button>
+            <button type="button" class="btn btn-success" id="p2">Pedir</button>
 
             <div class="modal fade" id="kiwi" tabindex="-1" aria-labelledby="kiwiLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -168,9 +173,10 @@
           <div class="card-body">
             <h5 class="card-title">Mix de vegetais</h5>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#vegetais">
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#vegetais">
               Ver receita
             </button>
+            <button type="button" class="btn btn-success" id="p3">Pedir</button>
 
             <div class="modal fade" id="vegetais" tabindex="-1" aria-labelledby="vegetaisLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -212,9 +218,10 @@
           <div class="card-body">
             <h5 class="card-title">Pimentões à Juliana</h5>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#pimentao">
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#pimentao">
               Ver receita
             </button>
+            <button type="button" class="btn btn-success" id="p4">Pedir</button>
 
             <div class="modal fade" id="pimentao" tabindex="-1" aria-labelledby="pimentaoLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -259,9 +266,10 @@
           <div class="card-body">
             <h5 class="card-title">Prato oriental</h5>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#oriental">
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#oriental">
               Ver receita
             </button>
+            <button type="button" class="btn btn-success" id="p5">Pedir</button>
 
             <div class="modal fade" id="oriental" tabindex="-1" aria-labelledby="orientalLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -303,9 +311,10 @@
           <div class="card-body">
             <h5 class="card-title">Beterrabas assadas</h5>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Ver receita
             </button>
+            <button type="button" class="btn btn-success" id="p6">Pedir</button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
@@ -414,12 +423,14 @@
 <img src="src/img/whatsapp.png"  class="img16" alt="Ícone do Whattsapp"> 
 </a>
 
+<div id="snackbar"> </div>
+
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
 
-  <script src="src/js/app.js" ></script> 
+  <script src="src/js/pedido.js" ></script> 
 </body>
 
 </html>
