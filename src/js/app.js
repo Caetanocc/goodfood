@@ -4,14 +4,15 @@ let bodyModalDados = document.querySelector('#bodyModalDados')
 
 function CarrinhosDeCompras() {
     console.log('foi');
-    const url = 'https://etec22s2-default-rtdb.firebaseio.com/goodfood.json'
+    const url = 'https://etec23-e0755-default-rtdb.firebaseio.com/goodfood.json';
     const options = {
         method: 'GET',
         mode: 'cors',
         headers: {
             'content-type': 'application/json;charset=utf-8'
         }
-    }
+    };
+
     fetch(url, options)
         .then(response => response.json())
         .then(dados => {
@@ -29,18 +30,18 @@ function CarrinhosDeCompras() {
                 tbody.innerHTML = '';
 
                 for (let chave in dados) {
-                    for (let subChave in dados[chave]) {
-                        let item = dados[chave][subChave];
-                        let row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td>${item.desc}</td>
-                            <td>${item.qtde}</td>
-                            <td>${item.valor}</td>
-                        `;
-                        tbody.appendChild(row);
-                    }
+                    let item = dados[chave];
+                    let row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.desc}</td>
+                        <td>${item.qtde}</td>
+                        <td>${item.valor}</td>
+                    `;
+                    tbody.appendChild(row);
                 }
             } else {
+                // Handle the case where there are no data
             }
         });
 }
+
