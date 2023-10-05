@@ -1,3 +1,18 @@
+let nrmesa = 0;
+
+
+	// Obtém a string de consulta da URL
+	const queryString = window.location.search;
+	// Cria um objeto com os parâmetros da string de consulta
+	const params = new URLSearchParams(queryString);
+	// Obtém o valor do parâmetro "mesa"
+	const mesa = params.get('mesa');
+
+
+	console.log(mesa); // "mesa"
+
+
+
 let produtos = [
     {"id": "p1", "desc": "Tigela de abacate", "valor": "20"},
     {"id": "p2", "desc": "Salada de kiwi", "valor": "45"},
@@ -33,7 +48,7 @@ function addItemPedido(idProduto){
         }
     })
 
-    const url = `https://etec23-e0755-default-rtdb.firebaseio.com/goodfood.json`
+    const url = `https://etec23-e0755-default-rtdb.firebaseio.com/goodfood/${mesa}.json`
     const options = {
         method: 'POST',
         mode: 'cors',
