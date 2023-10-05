@@ -4,7 +4,7 @@ let bodyModalDados = document.querySelector('#bodyModalDados')
 
 function CarrinhosDeCompras() {
     console.log('foi');
-    const url = 'https://etec23-e0755-default-rtdb.firebaseio.com/goodfood.json';
+    const url = `https://etec23-e0755-default-rtdb.firebaseio.com/goodfood/${mesa}.json`;
     const options = {
         method: 'GET',
         mode: 'cors',
