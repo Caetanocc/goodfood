@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#notaModal">Nota</a>
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#ModalPedidos">Pedidos</a>
           <a class="nav-link" href="quemsomos.html">Quem Somos</a>
           <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
         </div>
@@ -435,6 +435,35 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-Primary" id="carrinhoEnviar">Enviar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalPedidos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Pedidos:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="bodyModalDados">
+        <table class="table" id="tabelaPedidos">
+          <!-- Aqui você pode adicionar cabeçalhos de coluna, se necessário -->
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Quantidade</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Os dados serão preenchidos aqui -->
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
       </div>
     </div>

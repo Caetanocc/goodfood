@@ -1,4 +1,3 @@
-
 let notaModal = document.querySelector('#notaModal')
 let bodyModalDados = document.querySelector('#bodyModalDados')
 
@@ -20,35 +19,33 @@ function CarrinhosDeCompras() {
                 linha = '<h5> Erro ao consultar BD</h5>';
                 bodyModalDados.innerHTML = linha;
                 return;
-            }else{
-                        if(dados){
-                        
-                            console.log(dados);
-                            let tabela = document.getElementById('tabelaCompras');
-                            let tbody = tabela.querySelector('tbody');
+            }
 
-                            
-                            tbody.innerHTML = '';
-                            for (let chave in dados) {
-                                if(dados[chave].status == 1){
-                                let item = dados[chave];
-                                let row = document.createElement('tr');
-                                row.innerHTML = `
-                                    <td>${item.desc}</td>
-                                    <td>${item.qtde}</td>
-                                    <td>${item.status}</td>
-                                    <td>${item.valor}</td>
-                                `;
-                                tbody.appendChild(row);
-                            }}
-                        } else {
-                            
-                        }
-                    
+            if (dados) {
+                console.log(dados);
+                let tabela = document.getElementById('tabelaCompras');
+                let tbody = tabela.querySelector('tbody');
 
-
-
+                tbody.innerHTML = '';
+                
+                for (let chave in dados) {
+                    let item = dados[chave];
+                    if(item.status == 2){
+                      
+                        let row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${item.desc}</td>
+                            <td>${item.qtde}</td>
+                            <td>${item.valor}</td>
+                        `;
+                        tbody.appendChild(row);
                     }
+                  
+                }
+            
+            } else {
+                // Handle the case where there are no data
+            }
         });
 }
 
