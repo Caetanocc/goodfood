@@ -4,7 +4,7 @@ let listaProd = document.querySelector('#lista-produtos')
 
 function listarPedidos(){
     let linha = ""
-    const url = `https://.firebaseio.com/goodfood.json`
+    const url = `https://etec23-e0755-default-rtdb.firebaseio.com/goodfood.json`
 
     const options = {
         method: 'GET',
@@ -23,17 +23,17 @@ function listarPedidos(){
                 console.log(data)
                 listaProd.innerHTML = ""
 
-                for (let pedido in data) {
-                    if (data.hasOwnProperty(pedido)) {
-                        const childData = data[pedido];
+                for (let mesa in data) {
+                    if (data.hasOwnProperty(mesa)) {
+                        const childData = data[mesa];
 
-                        console.log(pedido)
+                        console.log(mesa)
                         const tr = document.createElement("tr")
                         tr.classList.add("user-row")
-                        tr.setAttribute("id", pedido)
+                        tr.setAttribute("id", mesa)
 
                         tr.innerHTML = `
-                            <td>Pedido: ${pedido}</td>
+                            <td>Pedido: ${mesa}</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -57,7 +57,7 @@ function listarPedidos(){
                                 <td>${childData[kkey].status}</td>
                                 <td>X</td>
                             `
-                            // listaProd.appendChild(tr)
+                             listaProd.appendChild(tr)
                         }
                     }
                 }

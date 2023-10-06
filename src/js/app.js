@@ -43,5 +43,9 @@ function CarrinhosDeCompras() {
                 // Handle the case where there are no data
             }
         });
+
+       
 }
+
+
 
