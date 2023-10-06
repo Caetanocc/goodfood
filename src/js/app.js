@@ -30,7 +30,7 @@ function CarrinhosDeCompras() {
                 
                 for (let chave in dados) {
                     let item = dados[chave];
-                    if(item.status == 2){
+                    if(item.status == 1){
                       
                         let row = document.createElement('tr');
                         row.innerHTML = `
