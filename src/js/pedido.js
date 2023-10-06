@@ -35,6 +35,9 @@ let produtos = [
     {"id": "p4", "desc": "Pimentões à Juliana", "valor": "35"},
     {"id": "p5", "desc": "Prato oriental", "valor": "40"},
     {"id": "p6", "desc": "Beterrabas assadas", "valor": "15"},
+    {"id": "p7", "desc": "Peixe assado", "valor": "50"},
+    {"id": "p8", "desc": "Porco assado", "valor": "35"},
+    {"id": "p9", "desc": "Carne assada", "valor": "60"},
     
 ]
 
