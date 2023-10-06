@@ -51,7 +51,7 @@ function CarrinhosDeCompras() {
 
 buttonadicionar = document.getElementById('carrinhoEnviar');
 buttonadicionar.addEventListener('click',function atualizarItem(){
-    const url = `https://etec23-e0755-default-rtdb.firebaseio.com/goodfood/${mesa}.json`;
+    const url = `https://etec22s2-default-rtdb.firebaseio.com/goodfood/${mesa}.json`;
     const options = {
         method: 'GET',
         mode: 'cors',
