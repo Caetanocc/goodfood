@@ -47,7 +47,11 @@ function CarrinhosDeCompras() {
                 // Handle the case where there are no data
             }
         });
+
+       
 }
+
+
 
 buttonadicionar = document.getElementById('carrinhoEnviar');
 buttonadicionar.addEventListener('click',function atualizarItem(){
