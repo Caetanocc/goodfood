@@ -63,7 +63,7 @@ function addItemPedido(idProduto){
         }
     })
 
-    const url = `https://etec23-e0755-default-rtdb.firebaseio.com/goodfood/${mesa}.json`
+    const url = `https://etec22s2-default-rtdb.firebaseio.com/goodfood/${mesa}.json`
     const options = {
         method: 'POST',
         mode: 'cors',

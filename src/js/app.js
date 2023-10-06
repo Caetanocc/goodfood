@@ -4,6 +4,7 @@ let bodyModalDados = document.querySelector('#bodyModalDados')
 
 function CarrinhosDeCompras() {
     const url = `https://etec22s2-default-rtdb.firebaseio.com/goodfood/${mesa}.json`;
+    console.log(mesa)
     const options = {
         method: 'GET',
         mode: 'cors',
@@ -51,11 +52,8 @@ function CarrinhosDeCompras() {
         });
 }
 
-
-
-
-
-function atualizarItem(){
+buttonadicionar = document.getElementById('carrinhoEnviar');
+buttonadicionar.addEventListener('click',function atualizarItem(){
     const url = `https://etec23-e0755-default-rtdb.firebaseio.com/goodfood/${mesa}.json`;
     const options = {
         method: 'GET',
@@ -101,4 +99,4 @@ function atualizarItem(){
                     )    
                 }}}})
                 
-}
+})
