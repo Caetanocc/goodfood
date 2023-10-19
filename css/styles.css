@@ -46,3 +46,7 @@ border: 5px solid black;
 #addButton{
     font-size: small;
 }
+.nav-link{
+    width: auto !important;
+    max-width: 50px !important;
+}
