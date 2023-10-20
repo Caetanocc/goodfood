@@ -38,6 +38,9 @@ let produtos = [
     {"id": "p7", "desc": "Peixe assado", "valor": "50"},
     {"id": "p8", "desc": "Porco assado", "valor": "35"},
     {"id": "p9", "desc": "Carne assada", "valor": "60"},
+    {"id": "p10", "desc": "Picadinho de Carne com Quiabo", "valor": "40"},
+    {"id": "p11", "desc": "Pudim de Aveia Corte Rústico", "valor": "50"},
+    {"id": "p12", "desc": "Bolo De Maçã Sem Açúcar", "valor": "27"},
     
 ]
 
