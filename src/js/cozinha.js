@@ -42,7 +42,8 @@ function listarPedidos(){
                         listaProd.appendChild(tr)
 
                         for (let kkey in childData){
-
+                            console.log(childData[kkey].status==2)
+                           if(childData[kkey].status==2){
                             console.log(childData[kkey].desc)
                             console.log(kkey)
 
@@ -58,6 +59,10 @@ function listarPedidos(){
                                 <td>X</td>
                             `
                              listaProd.appendChild(tr)
+                           } 
+                           
+
+                           
                         }
                     }
                 }
