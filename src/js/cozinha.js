@@ -53,7 +53,7 @@ function listarPedidos(){
                             tr.setAttribute("id", kkey)
 
                             tr.innerHTML = `
-                                
+                                <td></td>
                                 <td>${childData[kkey].desc}</td>
                                 <td>${childData[kkey].valor}</td>
                                 <td>${childData[kkey].status}</td>
