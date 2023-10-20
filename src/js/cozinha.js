@@ -4,7 +4,7 @@ let listaProd = document.querySelector('#lista-produtos')
 
 function listarPedidos(){
     let linha = ""
-    const url = `https://etec23-e0755-default-rtdb.firebaseio.com/goodfood.json`
+    const url = `https://etec22s2-default-rtdb.firebaseio.com/goodfood.json`
 
     const options = {
         method: 'GET',
@@ -42,7 +42,8 @@ function listarPedidos(){
                         listaProd.appendChild(tr)
 
                         for (let kkey in childData){
-
+                            console.log(childData[kkey].status==2)
+                           if(childData[kkey].status==2){
                             console.log(childData[kkey].desc)
                             console.log(kkey)
 
@@ -58,6 +59,10 @@ function listarPedidos(){
                                 <td>X</td>
                             `
                              listaProd.appendChild(tr)
+                           } 
+                           
+
+                           
                         }
                     }
                 }
