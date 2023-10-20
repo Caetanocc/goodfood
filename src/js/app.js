@@ -70,6 +70,7 @@ buttonadicionar.addEventListener('click',function atualizarItem(){
     if (dados.error) {
     }else{
                 if(dados){
+                    document.getElementById("snackbar").style.backgroundColor = "red";
                     for(let chave in dados) {
                         
                     const url = `https://etec22s2-default-rtdb.firebaseio.com/goodfood/${mesa}/${chave}.json`
