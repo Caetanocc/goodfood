@@ -99,6 +99,7 @@ buttonadicionar.addEventListener('click',function atualizarItem(){
 
         }else{
             if(dados){
+                document.getElementById("snackbar").style.backgroundColor = "red";
                 for(let chave in dados) {
                     if (dados[chave].status==1){
 
@@ -131,5 +132,6 @@ buttonadicionar.addEventListener('click',function atualizarItem(){
             }
         }
     })
+
                 
 })
