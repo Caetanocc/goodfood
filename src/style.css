@@ -62,7 +62,7 @@ h2
 }
 .floatBuy {
     position:fixed;
-    width:60px;
+    width:60px !important;
     height:60px;
     bottom:40px;
     right:120px;
@@ -113,4 +113,20 @@ font-weight: 600;
 }
 .Modal div{
     width: 500px;
+}
+
+.floatWa {
+    position:fixed;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index:1000;
+    width:60px !important;
+
 }
