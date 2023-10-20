@@ -37,7 +37,7 @@ function listarPedidos(){
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            
                         `
                         listaProd.appendChild(tr)
 
@@ -51,14 +51,37 @@ function listarPedidos(){
                             const tr = document.createElement("tr")
                             tr.classList.add("user-row")
                             tr.setAttribute("id", kkey)
-
+                            
+                            for (let kkey in childData){
+                                const status = childData[kkey].status;
+                                let statusColor = "";
+                                if (status == 1) {
+                                    statusColor = "red";
+                                } else if (status == 2) {
+                                    statusColor = "yellow";
+                                } else if (status == 3) {
+                                    statusColor = "green";
+                                }
+                                const tr = document.createElement("tr");
+                                tr.classList.add("user-row");
+                                tr.setAttribute("id", kkey);
+                                tr.style.backgroundColor = statusColor;
+                                tr.innerHTML = `
+                                    <td>${childData[kkey].desc}</td>
+                                    <td>${childData[kkey].valor}</td>
+                                    <td>${status}</td>
+                                `;
+                                listaProd.appendChild(tr);
+                            }
+                               
+                               
                             tr.innerHTML = `
-                                
                                 <td>${childData[kkey].desc}</td>
                                 <td>${childData[kkey].valor}</td>
                                 <td>${childData[kkey].status}</td>
-                                <td>X</td>
+                                
                             `
+                               
                              listaProd.appendChild(tr)
                            } 
                            
