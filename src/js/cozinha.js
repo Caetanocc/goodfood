@@ -33,7 +33,7 @@ function listarPedidos(){
                         tr.setAttribute("id", mesa)
 
                         tr.innerHTML = `
-                            <td>Pedido: ${mesa}</td>
+                            <td>Mesa: ${mesa}</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -43,6 +43,8 @@ function listarPedidos(){
 
                         for (let kkey in childData){
 
+                           if(childData[kkey].status==2){
+
                             console.log(childData[kkey].desc)
                             console.log(kkey)
 
@@ -51,13 +53,17 @@ function listarPedidos(){
                             tr.setAttribute("id", kkey)
 
                             tr.innerHTML = `
-                                <td>${childData[kkey].item}</td>
+                                
                                 <td>${childData[kkey].desc}</td>
                                 <td>${childData[kkey].valor}</td>
                                 <td>${childData[kkey].status}</td>
                                 <td>X</td>
                             `
                              listaProd.appendChild(tr)
+                           } 
+                           
+
+                           
                         }
                     }
                 }
