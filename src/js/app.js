@@ -95,37 +95,41 @@ buttonadicionar.addEventListener('click',function atualizarItem(){
     fetch(url, options)
     .then(response => response.json())
     .then(dados => {   
-    if (dados.error) {
-    }else{
-                if(dados){
-                    for(let chave in dados) {
-                        
-                    const url = `https://etec22s2-default-rtdb.firebaseio.com/goodfood/${mesa}/${chave}.json`
-                    console.log(dados)
-                    const options = {
-                        method: 'PATCH',
-                        mode: 'cors',
-                        headers: {
-                          'Accept': 'application/json',
-                          'content-type': 'application/json;charset=utf-8'
-                        },
-                        body: `{
-                            "produto": "${dados[chave].produto}",
-                            "desc": "${dados[chave].desc}",
-                            "valor": "${dados[chave].valor}",
-                            "qtde": "1",
-                            "status": "2" }`,
-                      }
-                
-                
-                
-                    fetch(url,options).then(
-                        response => response.json()
-                    ).then(
-                        data => {
-                            console.log(data)
-                        }
-                    )    
-                }}}})
+        if (dados.error) {
+
+        }else{
+            if(dados){
+                for(let chave in dados) {
+                    if (dados[chave].status==1){
+
+                        const url = `https://etec22s2-default-rtdb.firebaseio.com/goodfood/${mesa}/${chave}.json`
+                        console.log(dados)
+                        const options = {
+                            method: 'PATCH',
+                            mode: 'cors',
+                            headers: {
+                                'Accept': 'application/json',
+                                'content-type': 'application/json;charset=utf-8'
+                            },
+                            body: `{
+                                "produto": "${dados[chave].produto}",
+                                "desc": "${dados[chave].desc}",
+                                "valor": "${dados[chave].valor}",
+                                "qtde": "1",
+                                "status": "2" }`,
+                            }
+                        fetch(url,options).then(
+                            response => response.json()
+                        ).then(
+                            data => {
+                                console.log(data)
+                            }
+                        )    
+                    }
+                    
+                }
+            }
+        }
+    })
                 
 })
