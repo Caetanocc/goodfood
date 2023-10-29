@@ -1,4 +1,4 @@
-let nrmesa = 0;
+let mesa = 0;
 
 
 	// Obtém a string de consulta da URL
@@ -7,8 +7,6 @@ let nrmesa = 0;
 	const params = new URLSearchParams(queryString);
 	// Obtém o valor do parâmetro "mesa"
 	const mesamd5 = params.get('mesamd5');
-
-
 
 let mesas = [
     {"mesa":1, "mesamd5": "c4ca4238a0b923820dcc509a6f75849b"},
