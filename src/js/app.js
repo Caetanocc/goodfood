@@ -73,7 +73,7 @@ function Pedidos() {
             }
 
             if (dados) {
-                console.log(dados);
+                // console.log(dados);
                 let tabela = document.getElementById('tabelaPedidos');
                 let tbody = tabela.querySelector('tbody');
 
@@ -81,8 +81,7 @@ function Pedidos() {
                 
                 for (let chave in dados) {
                     let item = dados[chave];
-                    if(item.status == 2){
-                      
+                    if(item.status >= 2){
                         let row = document.createElement('tr');
                         row.innerHTML = `
                             <td>${item.desc}</td>
@@ -90,6 +89,16 @@ function Pedidos() {
                             <td>${item.valor}</td>
                         `;
                         tbody.appendChild(row);
+
+                        // Adicionar a classe CSS apropriada com base no valor do status
+                        if (item.status === '1') {
+                            row.classList.add('bg-danger');
+                        } else if (item.status === '2') {
+                            row.classList.add('bg-warning');
+                        } else if (item.status === '3') {
+                            row.classList.add('bg-success');
+                        }
+
                     }
                   
                 }
@@ -118,41 +127,35 @@ buttonadicionar.addEventListener('click',function atualizarItem(){
     fetch(url, options)
     .then(response => response.json())
     .then(dados => {   
-        if (dados.error) {
-
-        }else{
-            if(dados){
-                for(let chave in dados) {
-                    if (dados[chave].status==1){
-
-                        const url = `https://etec22s2-default-rtdb.firebaseio.com/goodfood/${mesa}/${chave}.json`
-                        console.log(dados)
-                        const options = {
-                            method: 'PATCH',
-                            mode: 'cors',
-                            headers: {
-                                'Accept': 'application/json',
-                                'content-type': 'application/json;charset=utf-8'
-                            },
-                            body: `{
-                                "produto": "${dados[chave].produto}",
-                                "desc": "${dados[chave].desc}",
-                                "valor": "${dados[chave].valor}",
-                                "qtde": "1",
-                                "status": "2" }`,
-                            }
-                        fetch(url,options).then(
-                            response => response.json()
-                        ).then(
-                            data => {
-                                console.log(data)
-                            }
-                        )    
+    if (dados.error) {
+    }else{
+                if(dados){
+                    for(let chave in dados) {
+                        
+                    const url = `https://etec22s2-default-rtdb.firebaseio.com/goodfood/${mesa}/${chave}.json`
+                    console.log(dados)
+                    const options = {
+                        method: 'PATCH',
+                        mode: 'cors',
+                        headers: {
+                          'Accept': 'application/json',
+                          'content-type': 'application/json;charset=utf-8'
+                        },
+                        body: `{
+                            "produto": "${dados[chave].produto}",
+                            "desc": "${dados[chave].desc}",
+                            "valor": "${dados[chave].valor}",
+                            "qtde": "1",
+                            "status": "2" }`,
                     }
-                    
-                }
-            }
-        }
-    })
+                
+                    fetch(url,options).then(
+                        response => response.json()
+                    ).then(
+                        data => {
+                            console.log(data)
+                        }
+                    )    
+                }}}})
                 
 })
